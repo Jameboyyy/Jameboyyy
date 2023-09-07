@@ -8,4 +8,4 @@ Hello there! My name is James Daniel Cadavona. I am a 21 year old Front End Soft
 
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Jameboyyy)](https://github.com/anuraghazra/github-readme-stats)          ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Jameboyyy)
 
-:dancers: :basketball: Outside of Software Engineering, I enjoy making choreography to music I like to help with my creativity as well as to keep my body in healthy form. On the weekend, I also like to play basketball at my local gym to help keep my mind at ease.
+:dancers: :basketball: Outside of Software Engineering, I enjoy making choreography to help with my creativity as well as to keep my body in healthy form. On the weekend, I also like to play basketball at my local gym to help keep my mind at ease.
