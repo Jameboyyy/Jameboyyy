@@ -2,7 +2,7 @@
 
 :wink: About Me
 
-Hello there! My name is James Daniel Cadavona. I am a 21 year old Front End Software Engineer studying at California State University, Fullerton. I am pursuing a B.S in Computer Science expected in May 2024.
+Hello there! My name is James Daniel Cadavona. I am a 22 year old Front End Software Engineer studying at California State University, Fullerton. I will be graduating with a B.S in Computer Science in May 2024
 
 :computer: I enjoy creating modern websites and improving my skills as a UI/UX developer. I am looking forward to any opportunities.
 
