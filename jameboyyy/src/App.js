@@ -1,15 +1,15 @@
 // App.js
 import React from 'react';
-import Landscape from './pages/landscape'; // Adjust the path as necessary
 import ParticleBackground from './background/particlebackground'
 import './index.css';
+import Homepage from './pages/homepage';
 
 function App() {
   return (
     <div>
       <ParticleBackground />
       <div className="content">
-        <Landscape />
+        <Homepage/>
       </div>
     </div>
   );

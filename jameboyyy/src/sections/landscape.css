@@ -4,6 +4,7 @@
     width: 80%;
     height: 80vh;
     display: flex;
+    position: relative;
 }
 
 .landscape__left {
@@ -50,20 +51,16 @@
     line-height: 1.5;
 }
 
-.contact__btn {
-    margin-top: 1.5rem;
-    padding: 1rem 1rem; 
-    font-size: 1rem; 
-    color: #ffffff; 
-    background-color: #8fbc8f; 
-    text-decoration: none; 
-    border-radius: 5px;
-    display: inline-flex; 
-    align-items: center; 
-    gap: 0.5rem; 
-    width: 13%;
-    transition: background-color 0.3s ease; 
-    text-align: center;
+.based {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+.map__pin {
+    margin-right: 10px;
 }
 
 .headshot__container {
@@ -85,4 +82,45 @@
     position: absolute;
     left: 30%;
     transform: translateX(-50%);
+}
+
+.scroll__indicator {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll__icon {
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    display: block;
+}
+
+.scroll__icon.mobile {
+    display: none;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transfrom: translateY(-50px);
+    }
+    60% {
+        transform: translateY(-30px);
+    }
+}
+
+@media (max-width: 786px) {
+    .scroll__icon {
+        display: none;
+    }
+    .scroll__icon.mobile {
+        display: block;
+        font-size: 2rem;
+        animation: bounce 2s infinite;
+    }
 }
