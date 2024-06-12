@@ -21,7 +21,7 @@ const Projects = () => {
     }, [apiUrl]);
 
     return (
-        <div className="projects__container">
+        <div id="projects__container">
             <h1 className="projects__title">Projects</h1>
             <div className="projects__list">
                 {projects.map(project => (

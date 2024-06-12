@@ -1,16 +1,31 @@
-.contact__container {
+#contact__container {
     width: 80%;
     margin: 0 auto;
     padding: 2rem 0;
 }
 
 .contact__title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.contact__card {
+    display: flex;
+    justify-content: space-between;
+    background-color: #42579d;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact__form {
+    flex: 1;
+    margin-right: 2rem;
     display: flex;
     flex-direction: column;
 }
@@ -23,6 +38,9 @@
     font-size: 1rem;
     margin-bottom: 0.5rem;
     display: block;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .contact__input,
@@ -33,6 +51,11 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+    resize: none;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .contact__input:focus,
@@ -58,3 +81,34 @@
 .contact__button:hover {
     background-color: #90EE90; /* Button hover color */
 }
+
+.contact__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Align items to the top */
+    align-items: center; /* Center items horizontally */
+    padding-left: 2rem;
+    border-left: 1px solid #ccc;
+}
+
+.contact__info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center; /* Center text */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.contact__info p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Center text */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+

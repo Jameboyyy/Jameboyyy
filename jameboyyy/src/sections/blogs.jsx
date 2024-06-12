@@ -36,7 +36,7 @@ const Blogs = () => {
     };
 
     return (
-        <div className="blogs__container">
+        <div id="blogs__container">
             <h1 className="blogs__title">Blogs</h1>
             <div className="blogs__list">
                 {blogs.map(blog => (

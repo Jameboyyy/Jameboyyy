@@ -1,4 +1,3 @@
-// ParticleBackground.jsx
 import React, { useEffect, useMemo, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
@@ -30,8 +29,7 @@ const ParticleBackground = () => {
       interactivity: {
         events: {
           onClick: {
-            enable: true,
-            mode: 'push',
+            enable: false, // Disable push mode on click
           },
           onHover: {
             enable: true,
@@ -39,9 +37,6 @@ const ParticleBackground = () => {
           },
         },
         modes: {
-          push: {
-            quantity: 4,
-          },
           repulse: {
             distance: 200,
             duration: 0.4,
@@ -70,10 +65,8 @@ const ParticleBackground = () => {
           straight: false,
         },
         number: {
-          density: {
-            enable: true,
-          },
-          value: 80,
+          value: 80, // Fixed number of particles
+          limit: 80, // Ensure the number of particles doesn't exceed this value
         },
         opacity: {
           value: 0.5,

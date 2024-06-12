@@ -13,7 +13,6 @@ const Contact = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
-                    // Reset form or show success message
                     form.current.reset(); 
                 },
                 (error) => {
@@ -23,40 +22,47 @@ const Contact = () => {
     };
 
     return (
-        <div className="contact__container">
+        <div id="contact__container">
             <h1 className="contact__title">Contact</h1>
-            <form ref={form} className="contact__form" onSubmit={sendEmail}>
-                <div className="contact__form-group">
-                    <label htmlFor="name" className="contact__label">Name</label>
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="contact__input"
-                        required
-                    />
+            <div className="contact__card">
+                <form ref={form} className="contact__form" onSubmit={sendEmail}>
+                    <div className="contact__form-group">
+                        <label htmlFor="name" className="contact__label">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            className="contact__input"
+                            required
+                        />
+                    </div>
+                    <div className="contact__form-group">
+                        <label htmlFor="email" className="contact__label">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            className="contact__input"
+                            required
+                        />
+                    </div>
+                    <div className="contact__form-group">
+                        <label htmlFor="message" className="contact__label">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            className="contact__textarea"
+                            required
+                        ></textarea>
+                    </div>
+                    <button type="submit" className="contact__button">Send</button>
+                </form>
+                <div className="contact__info">
+                    <h2>Get in Touch</h2>
+                    <p>If you have any questions, feel free to reach out via the form on the left. I'm always happy to connect and assist with any inquiries you may have.</p>
+                    <p>Looking forward to hearing from you!</p>
                 </div>
-                <div className="contact__form-group">
-                    <label htmlFor="email" className="contact__label">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="contact__input"
-                        required
-                    />
-                </div>
-                <div className="contact__form-group">
-                    <label htmlFor="message" className="contact__label">Message</label>
-                    <textarea
-                        id="message"
-                        name="message"
-                        className="contact__textarea"
-                        required
-                    ></textarea>
-                </div>
-                <button type="submit" className="contact__button">Send</button>
-            </form>
+            </div>
         </div>
     );
 };

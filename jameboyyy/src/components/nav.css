@@ -21,6 +21,7 @@
     font-weight: 400;
     font-style: normal;
     font-size: 3.5rem;
+    color: #ffffff;
 }
 
 .nav__heading a, .nav__list a {
@@ -35,8 +36,42 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    color: #ffffff;
 }
 
 .nav__list {
     margin-right: 20px;
+}
+
+
+@media screen and (max-width: 480px) {
+    .nav__container {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav__heading {
+        display: none;
+    }
+
+    .nav__lists {
+        list-style-type: none;
+        font-family: "Open Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .nav__right {
+        margin: 0;
+        padding: 0;
+    }
 }

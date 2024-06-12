@@ -1,4 +1,4 @@
-.projects__container {
+#projects__container {
     width: 80%;
     margin: 0 auto;
     padding: 2rem;
@@ -8,6 +8,10 @@
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 .projects__list {
@@ -32,6 +36,10 @@
     flex-direction: column;
     justify-content: space-between; /* Distribute space between items */
     overflow: hidden;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .project__item:hover {

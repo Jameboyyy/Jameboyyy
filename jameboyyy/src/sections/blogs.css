@@ -1,4 +1,4 @@
-.blogs__container {
+#blogs__container {
     width: 80%;
     margin: 0 auto;
     padding: 2rem;
@@ -8,6 +8,10 @@
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 .blogs__list {
@@ -33,6 +37,10 @@
     justify-content: space-between; /* Ensures space is distributed between items */
     overflow: hidden;
     cursor: pointer;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .blog__item:hover {
@@ -54,18 +62,23 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    right: auto;
-    bottom: auto;
-    margin-right: -50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: #42579d;
+    color: white;
     padding: 2rem;
     border-radius: 8px;
     max-width: 80%;
     width: 600px;
+    max-height: 80vh; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max-height */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1001; /* Ensures the modal is above other elements */
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
 
 .overlay {
     position: fixed;
@@ -74,7 +87,7 @@
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.75);
-    z-index: 1000; /* Ensures the overlay is above other elements */
+    z-index: 1000; 
 }
 
 .modal__content {
@@ -84,7 +97,7 @@
 .modal__close-button {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #42579d;
+    background-color: #90EE90;
     color: white;
     border: none;
     border-radius: 4px;
