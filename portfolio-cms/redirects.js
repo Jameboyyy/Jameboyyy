@@ -73,7 +73,7 @@ module.exports = async () => {
     return redirects
   } catch (error) {
     if (process.env.NODE_ENV === 'production') {
-      console.error(`Error configuring redirects: ${error}`) // eslint-disable-line no-console
+      console.error(`Error configuring redirects: ${error}`)
     }
 
     return []
