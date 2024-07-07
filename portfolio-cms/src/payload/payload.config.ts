@@ -78,13 +78,13 @@ export default buildConfig({
   express: {
     preMiddleware: [
       cors({
-        origin: 'https://jameboyyy-payload.vercel.app',
+        origin: 'https://jameboyyy.vercel.app',
         credentials: true,
       }),
     ],
   },
-  cors: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ''].filter(Boolean),
-  csrf: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ''].filter(Boolean),
+  cors: ['https://jameboyyy.vercel.app'],
+  csrf: ['https://jameboyyy.vercel.app'],
   endpoints: [
     {
       path: '/seed',
