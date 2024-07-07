@@ -3,7 +3,7 @@ import './projects.css';
 
 const Projects = () => {
     const [projects, setProjects] = useState([]);
-    const apiUrl = process.env.REACT_APP_PAYLOAD_API_URL;
+    const apiUrl = process.env.REACT_APP_PAYLOAD_API_URL || 'https://jameboyyy-payload.vercel.app';
 
     useEffect(() => {
         console.log('REACT_APP_PAYLOAD_API_URL:', apiUrl);

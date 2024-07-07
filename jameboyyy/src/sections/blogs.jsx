@@ -8,7 +8,7 @@ const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     const [selectedBlog, setSelectedBlog] = useState(null);
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const apiUrl = process.env.REACT_APP_PAYLOAD_API_URL;
+    const apiUrl = process.env.REACT_APP_PAYLOAD_API_URL || 'https://jameboyyy-payload.vercel.app';
 
     useEffect(() => {
         console.log('REACT_APP_PAYLOAD_API_URL:', apiUrl);
