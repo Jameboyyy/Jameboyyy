@@ -95,3 +95,32 @@
 .project__link:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 786px) {
+    .project__item {
+        width: calc(50% - 2rem);
+    }
+
+    .projects__title {
+        font-size: 2rem;
+    }
+
+    .project__header h2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .project__item {
+        width: calc(100% - 2rem);
+    }
+
+    .project__title {
+        font-size: 1rem;
+    }
+
+    .project__header {
+        font-size: 1rem;
+    }
+}

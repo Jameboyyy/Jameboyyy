@@ -1,3 +1,8 @@
+#landscape__section {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 
 .landscape__container {
     margin: 0 auto;
@@ -64,6 +69,7 @@
 }
 
 .headshot__container {
+    display: inline-block;
     width: 450px;
     height: 450px;
     border: 5px solid #ffffff;
@@ -76,12 +82,16 @@
 }
 
 .headshot__img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: auto;
     height: 100%;
     object-fit: cover;
     position: absolute;
     left: 30%;
     transform: translateX(-50%);
+    object-position: center;
 }
 
 .scroll__indicator {
@@ -115,6 +125,7 @@
 }
 
 @media (max-width: 786px) {
+
     .scroll__icon {
         display: none;
     }
@@ -123,12 +134,76 @@
         font-size: 2rem;
         animation: bounce 2s infinite;
     }
+
+    .landscape__container {
+        flex-direction: row;
+        padding: 10px;
+        align-items: center;
+    }
+
+    .landscape__left, .landscape__right {
+        width: 50%;
+    }
+
+    .landscape__right {
+        text-align: center;
+    }
+
+    .headshot__container {
+        min-width: 200px;
+        padding-bottom: 100%;
+        height: 100%;
+    }
+
+    .landscape__title, .landscape__name {
+        font-size: 2rem;
+    }
+
+    .landscape__subtitle {
+        font-size: 1.5rem;
+    }
+
+    .landscape__desc {
+        font-size: 1rem;
+    }
+
+    .based {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
     .landscape__container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         text-align: center;
+        width: 90%;
+        padding: 0;
+    }
+
+    .landscape__left, .landscape__right {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .landscape__right {
+        order: -1;
+        text-align: center;
+        width: 100%;
+    }
+
+    .headshot__container {
+        width: 50vw;
+        min-width: 50px;
+        height: 0;
+        padding-bottom: 50vw; 
+        position: relative; 
+        overflow: hidden;
+    }
+
+    .landscape__title, .landscape__subtitle, .landscape__desc, .based {
+        width: 100%;
+        padding: 0 10px;
     }
 }

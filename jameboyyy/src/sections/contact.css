@@ -32,6 +32,7 @@
 
 .contact__form-group {
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .contact__label {
@@ -68,6 +69,7 @@
 }
 
 .contact__button {
+    width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
     color: white;
@@ -76,6 +78,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    align-self: center; /* Center button horizontally */
+    margin-top: 1rem; /* Add margin to separate button from input fields */
 }
 
 .contact__button:hover {
@@ -112,3 +116,23 @@
     font-style: normal;
 }
 
+@media (max-width: 786px) {
+
+    .contact__title {
+        font-size: 2rem;
+    }
+
+    .contact__card {
+        flex-direction: column-reverse;
+    }
+
+    .contact__form {
+        margin-right: 0;
+    }
+
+    .contact__info {
+        border-left: none;
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+}

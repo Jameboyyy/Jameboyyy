@@ -1,9 +1,9 @@
-import { webpackBundler } from '@payloadcms/bundler-webpack'
-import { mongooseAdapter } from '@payloadcms/db-mongodb'
-import { payloadCloud } from '@payloadcms/plugin-cloud'
-import nestedDocs from '@payloadcms/plugin-nested-docs'
-import redirects from '@payloadcms/plugin-redirects'
-import seo from '@payloadcms/plugin-seo'
+import { webpackBundler } from '@payloadcms/bundler-webpack';
+import { mongooseAdapter } from '@payloadcms/db-mongodb';
+import { payloadCloud } from '@payloadcms/plugin-cloud';
+import nestedDocs from '@payloadcms/plugin-nested-docs';
+import redirects from '@payloadcms/plugin-redirects';
+import seo from '@payloadcms/plugin-seo';
 
 import { slateEditor } from '@payloadcms/richtext-slate';
 import cors from 'cors';
@@ -27,12 +27,17 @@ import { Settings } from './globals/Settings';
 import type { GenerateTitle } from '@payloadcms/plugin-seo/types';
 
 const generateTitle: GenerateTitle = () => {
-  return 'My Website'
+  return 'My Website';
 }
 
 dotenv.config({
   path: path.resolve(__dirname, '../../.env'),
-})
+});
+
+console.log('Environment Variables:');
+console.log('DATABASE_URI:', process.env.DATABASE_URI);
+console.log('PAYLOAD_PUBLIC_SERVER_URL:', process.env.PAYLOAD_PUBLIC_SERVER_URL);
+console.log('NEXT_PUBLIC_SERVER_URL:', process.env.NEXT_PUBLIC_SERVER_URL);
 
 export default buildConfig({
   admin: {
@@ -101,4 +106,4 @@ export default buildConfig({
     }),
     payloadCloud(),
   ],
-})
+});

@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 import '../index.css';
+import './particlebackground.css'; // Import the new CSS file
 
 const ParticleBackground = () => {
   const [init, setInit] = useState(false);
@@ -18,8 +19,19 @@ const ParticleBackground = () => {
     console.log(container);
   };
 
-  const options = useMemo(
-    () => ({
+  // Function to get CSS variable value
+  const getCssVariableValue = (variableName) => {
+    return getComputedStyle(document.documentElement).getPropertyValue(variableName).trim();
+  };
+
+  const options = useMemo(() => {
+    // Get particle count from CSS variable
+    const particleCount = getCssVariableValue('--particle-count') || 80;
+
+    // Log the particle count to verify if it changes according to screen size
+    console.log('Particle count:', particleCount);
+
+    return {
       background: {
         color: {
           value: '#42579d',
@@ -65,8 +77,8 @@ const ParticleBackground = () => {
           straight: false,
         },
         number: {
-          value: 80, // Fixed number of particles
-          limit: 80, // Ensure the number of particles doesn't exceed this value
+          value: parseInt(particleCount, 10),
+          limit: parseInt(particleCount, 10),
         },
         opacity: {
           value: 0.5,
@@ -79,12 +91,15 @@ const ParticleBackground = () => {
         },
       },
       detectRetina: true,
-    }),
-    []
-  );
+    };
+  }, []);
 
   if (init) {
-    return <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options} />;
+    return (
+      <div className="particles-wrapper">
+        <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={options} />
+      </div>
+    );
   }
 
   return <></>;
