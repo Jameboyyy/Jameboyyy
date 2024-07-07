@@ -78,7 +78,7 @@ export default buildConfig({
   express: {
     preMiddleware: [
       cors({
-        origin: 'http://localhost:3000',
+        origin: 'https://jameboyyy-payload.vercel.app',
         credentials: true,
       }),
     ],
