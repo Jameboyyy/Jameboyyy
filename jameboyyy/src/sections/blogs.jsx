@@ -1,82 +1,72 @@
 import React, { useEffect, useState } from 'react';
 import Modal from 'react-modal';
+import sanityClient from '../sanityClient';
 import './blogs.css';
 
-Modal.setAppElement('#root'); // Set the app root for accessibility
+Modal.setAppElement('#root');
 
 const Blogs = () => {
-    const [blogs, setBlogs] = useState([]);
-    const [selectedBlog, setSelectedBlog] = useState(null);
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const apiUrl = process.env.REACT_APP_PAYLOAD_API_URL || 'https://jameboyyy-payload.vercel.app';
+  const [blogs, setBlogs] = useState([]);
+  const [selectedBlog, setSelectedBlog] = useState(null);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
-    useEffect(() => {
-        console.log('REACT_APP_PAYLOAD_API_URL:', apiUrl);
-        if (apiUrl) {
-            fetch(`${apiUrl}/posts`)
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Fetched Blogs:', data.docs);
-                    setBlogs(data.docs);
-                })
-                .catch(error => console.error('Error fetching blogs:', error));
-        } else {
-            console.error('API URL is not defined');
-        }
-    }, [apiUrl]);
+  useEffect(() => {
+    const blogsQuery = `*[_type == "post" && "Blogs" in categories[]->title]{
+      _id,
+      title,
+      publishedAt,
+      body
+    }`;
 
-    const openModal = (blog) => {
-        setSelectedBlog(blog);
-        setModalIsOpen(true);
-    };
+    sanityClient.fetch(blogsQuery)
+      .then(data => {
+        console.log('Fetched Blogs:', data); // Add this line to check if data is fetched correctly
+        setBlogs(data);
+      })
+      .catch(console.error);
+  }, []);
 
-    const closeModal = () => {
-        setModalIsOpen(false);
-        setSelectedBlog(null);
-    };
+  const openModal = (blog) => {
+    setSelectedBlog(blog);
+    setModalIsOpen(true);
+  };
 
-    return (
-        <div id="blogs__container">
-            <h1 className="blogs__title">Blogs</h1>
-            <div className="blogs__list">
-                {blogs.map(blog => (
-                    <div key={blog.id} className="blog__item" onClick={() => openModal(blog)}>
-                        <h2>{blog.title}</h2>
-                        <p>{new Date(blog.publishedAt).toLocaleDateString()}</p>
-                        {blog.hero && blog.hero.richText && blog.hero.richText.map((block, index) => (
-                            <p key={index}>{block.children[0].text}</p>
-                        ))}
-                    </div>
-                ))}
-            </div>
-            {selectedBlog && (
-                <Modal
-                    isOpen={modalIsOpen}
-                    onRequestClose={closeModal}
-                    contentLabel="Blog Details"
-                    className="modal"
-                    overlayClassName="overlay"
-                >
-                    <h2>{selectedBlog.title}</h2>
-                    <p>{new Date(selectedBlog.publishedAt).toLocaleDateString()}</p>
-                    <div className="modal__content">
-                        {selectedBlog.layout && selectedBlog.layout.map((block, index) => (
-                            <div key={index}>
-                                {block.blockType === 'content' && block.columns.map((column, colIndex) => (
-                                    <div key={colIndex}>
-                                        {column.richText && column.richText.map((textBlock, textIndex) => (
-                                            <p key={textIndex}>{textBlock.children[0].text}</p>
-                                        ))}
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                    <button onClick={closeModal} className="modal__close-button">Close</button>
-                </Modal>
-            )}
-        </div>
-    );
+  const closeModal = () => {
+    setModalIsOpen(false);
+    setSelectedBlog(null);
+  };
+
+  return (
+    <div id="blogs__container">
+      <h1 className="blogs__title">Blogs</h1>
+      <div className="blogs__list">
+        {blogs.map(blog => (
+          <div key={blog._id} className="blog__item" onClick={() => openModal(blog)}>
+            <h2>{blog.title}</h2>
+            <p>{new Date(blog.publishedAt).toLocaleDateString()}</p>
+          </div>
+        ))}
+      </div>
+      {selectedBlog && (
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Blog Details"
+          className="modal"
+          overlayClassName="overlay"
+        >
+          <h2>{selectedBlog.title}</h2>
+          <p>{new Date(selectedBlog.publishedAt).toLocaleDateString()}</p>
+          <div className="modal__content">
+            {selectedBlog.body && selectedBlog.body.map((block, index) => (
+              <p key={index}>{block.children[0].text}</p>
+            ))}
+          </div>
+          <button onClick={closeModal} className="modal__close-button">Close</button>
+        </Modal>
+      )}
+    </div>
+  );
 };
 
 export default Blogs;

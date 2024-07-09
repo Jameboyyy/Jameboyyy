@@ -31,15 +31,15 @@
     box-sizing: border-box;
     transition: transform 0.3s, box-shadow 0.3s;
     color: #ffffff;
-    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute space between items */
+    justify-content: space-between;
     overflow: hidden;
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    height: 450px; /* Fixed height for consistency */
 }
 
 .project__item:hover {
@@ -76,6 +76,8 @@
 .project__content {
     margin: 1rem 0;
     flex-grow: 1; /* Takes up the remaining space */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .project__links {
@@ -110,13 +112,12 @@
     }
 }
 
-
 @media (max-width: 480px) {
     .project__item {
         width: calc(100% - 2rem);
     }
 
-    .project__title {
+    .projects__title {
         font-size: 1rem;
     }
 
