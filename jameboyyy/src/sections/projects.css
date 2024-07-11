@@ -76,7 +76,7 @@
 .project__content {
     margin: 1rem 0;
     flex-grow: 1; /* Takes up the remaining space */
-    overflow: hidden;
+    overflow: auto;
     text-overflow: ellipsis;
 }
 
