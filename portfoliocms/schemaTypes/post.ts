@@ -73,6 +73,19 @@ export default defineType({
     }),
   ],
 
+  orderings: [
+    {
+      title: 'Published Date (Newest First)',
+      name: 'publishedDesc',
+      by: [{ field: 'publishedAt', direction: 'desc' }],
+    },
+    {
+      title: 'Published Date (Oldest First)',
+      name: 'publishedAsc',
+      by: [{ field: 'publishedAt', direction: 'asc' }],
+    },
+  ],
+
   preview: {
     select: {
       title: 'title',
