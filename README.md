@@ -1,11 +1,23 @@
-# Welcome :wave: !
+# Welcome 👋
 
-:wink: About Me
+## 😄 About Me
 
-Hello there! My name is James Daniel Cadavona. I am a 22 year old Front End Software Engineer studying at California State University, Fullerton. I will be graduating with a B.S in Computer Science in May 2024
+Hello! My name is James Daniel Cadavona. I am a Software Engineer based in Southern California with a background in Computer Science and a focus on DevOps and infrastructure.
 
-:computer: I enjoy creating modern websites and improving my skills as a UI/UX developer. I am looking forward to any opportunities.
+I enjoy building and deploying full-stack applications, with an emphasis on containerization, cloud infrastructure, and monitoring systems. Recently, I’ve been working on projects that involve Docker, Terraform, AWS, and real-time system observability.
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Jameboyyy)](https://github.com/anuraghazra/github-readme-stats)          ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Jameboyyy)
+I’m currently seeking opportunities where I can grow as a DevOps or infrastructure-focused engineer while continuing to build scalable and reliable systems.
 
-:dancers: :basketball: Outside of Software Engineering, I enjoy making choreography to help with my creativity as well as to keep my body in healthy form. On the weekend, I also like to play basketball at my local gym to help keep my mind at ease.
+## 🖥️ Tech Interests
+
+- Cloud & Infrastructure (AWS, Terraform)
+- Containerization (Docker)
+- Monitoring & Observability
+- Full-Stack Development (React, Node.js)
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Jameboyyy)](https://github.com/anuraghazra/github-readme-stats)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Jameboyyy)
+
+## 🏀 Outside of Tech
+
+Outside of software, I enjoy staying active and creative. I like making choreography as a creative outlet and playing basketball on the weekends to stay active and reset mentally.
