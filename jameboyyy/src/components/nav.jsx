@@ -16,9 +16,6 @@ const Nav = () => {
                             <a href="#projects">Projects</a>
                         </li>
                         <li className="nav__list">
-                            <a href="#blogs">Blogs</a>
-                        </li>
-                        <li className="nav__list">
                             <a href="#contact">Contact</a>
                         </li>
                     </ul>

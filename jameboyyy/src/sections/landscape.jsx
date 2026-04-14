@@ -17,10 +17,10 @@ const Landscape = () => {
                             <span className="highlight">James Cadavona</span>
                         </h2>
                         <h2 className="landscape__subtitle">I am a 
-                            <span className='highlight'> Front End Developer</span>
+                            <span className='highlight'> Full-Stack Developer • DevOps</span>
                         </h2>
                         <h2 className="landscape__desc">
-                        I am a recent Computer Science graduate from CSUF, with a keen interest in creating engaging and innovative Website and Mobile Front End Applications. 
+                        Building full-stack applications with a focus on infrastructure, performance, and scalable systems. 
                         </h2>
                         <h2 className="based">
                             <FontAwesomeIcon className="map__pin" icon={faMapPin}/>
