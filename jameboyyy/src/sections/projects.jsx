@@ -6,7 +6,18 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    sanityClient.fetch('*[_type == "post" && "Projects" in categories[]->title]{title, mainImage{asset->{url}}, publishedAt, links, body}')
+    sanityClient
+      .fetch(`
+        *[_type == "post" && "Projects" in categories[]->title]
+        | order(publishedAt desc) {
+          _id,
+          title,
+          mainImage{asset->{url}},
+          publishedAt,
+          links,
+          body
+        }
+      `)
       .then(data => setProjects(data))
       .catch(console.error);
   }, []);
