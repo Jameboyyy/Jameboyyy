@@ -1,6 +1,6 @@
-# Welcome 👋
+# Welcome 
 
-## 😄 About Me
+## About Me
 
 Hello! My name is James Daniel Cadavona. I am a Software Engineer based in Southern California with a background in Computer Science and a focus on DevOps and infrastructure.
 
@@ -8,7 +8,7 @@ I enjoy building and deploying full-stack applications, with an emphasis on cont
 
 I’m currently seeking opportunities where I can grow as a DevOps or infrastructure-focused engineer while continuing to build scalable and reliable systems.
 
-## 🖥️ Tech Interests
+## Tech Interests
 
 - Cloud & Infrastructure (AWS, Terraform)
 - Containerization (Docker)
@@ -18,6 +18,6 @@ I’m currently seeking opportunities where I can grow as a DevOps or infrastruc
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Jameboyyy)](https://github.com/anuraghazra/github-readme-stats)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Jameboyyy)
 
-## 🏀 Outside of Tech
+## Outside of Tech
 
 Outside of software, I enjoy staying active and creative. I like making choreography as a creative outlet and playing basketball on the weekends to stay active and reset mentally.
