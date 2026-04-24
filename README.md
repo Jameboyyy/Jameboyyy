@@ -8,10 +8,10 @@ I enjoy building and deploying full-stack applications, with an emphasis on cont
 
 ## Tech Interests
 
+- Full-Stack Development (React, Node.js)
 - Cloud & Infrastructure (AWS, Terraform)
 - Containerization (Docker)
 - Monitoring & Observability
-- Full-Stack Development (React, Node.js)
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Jameboyyy)](https://github.com/anuraghazra/github-readme-stats)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Jameboyyy)
