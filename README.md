@@ -9,7 +9,7 @@ I enjoy building and deploying full-stack applications, with an emphasis on cont
 ## Tech Interests
 
 - Full-Stack Development (React, Node.js)
-- Cloud & Infrastructure (AWS, Terraform)
+- Cloud & Infrastructure (AWS, Azure, Terraform)
 - Containerization (Docker)
 - Monitoring & Observability
 
